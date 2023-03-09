@@ -70,4 +70,26 @@ function findingBadData(numbers) {
     }
 }
 
-// Problem 5 
+// Problem 5
+// Description: In this function we will take 3 individual number as parameter each number has it's inner value first we will multiply by those value and then will sum all value as total converted value then if the total value is greater than 2000 then will return after 2000 and if the value is less then 2000 then will return the original total value
+
+function gemsToDiamond(firstFriend, secondFriend, thirdFriend) {
+    const firstFriendGemsPower = 21;
+    const secondFriendGemsPower = 32;
+    const thirdFriendGemsPower = 43;
+
+    let firstFriendGemToDiamond = firstFriend * firstFriendGemsPower;
+    let secondFriendGemToDiamond = secondFriend * secondFriendGemsPower;
+    let thirdFriendGemToDiamond = thirdFriend * thirdFriendGemsPower;
+
+    let totalGemToDiamond = firstFriendGemToDiamond + secondFriendGemToDiamond + thirdFriendGemToDiamond;
+
+    let twoTime1000 = 1000 * 2;
+    if (totalGemToDiamond > twoTime1000) {
+        let less2000 = totalGemToDiamond - 2000;
+        return less2000;
+    }
+    else {
+        return totalGemToDiamond;
+    }
+}
